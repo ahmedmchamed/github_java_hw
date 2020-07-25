@@ -42,4 +42,15 @@ public class RepositoryTest {
         assertEquals("Final commit", result.returnDescription());
     }
 
+    @Test
+    public void canRevertToCommit() {
+        repo.commitRevert(developCommit);
+        assertEquals(2, repo.getCommitsSize());
+        assertEquals("Initial commit", repo.getAllCommits().get(0).returnDescription());
+        assertEquals("Develop commit", repo.getAllCommits().get(1).returnDescription());
+        repo.commitRevert(initialCommit);
+        assertEquals(1, repo.getCommitsSize());
+        assertEquals("Initial commit", repo.getAllCommits().get(0).returnDescription());
+    }
+
 }

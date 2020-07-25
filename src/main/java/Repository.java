@@ -27,6 +27,10 @@ public class Repository {
         return this.commits.size();
     }
 
+    public ArrayList<Commit> getAllCommits() {
+        return this.commits;
+    }
+
     public void addCommitToRepo(Commit commit) {
         this.commits.add(commit);
     }
@@ -45,9 +49,14 @@ public class Repository {
         for (Commit commitToFind : this.commits) {
             if (commitToFind.returnUniqueId().equals(commitId)) {
                 int commitIndex = this.commits.indexOf((commitToFind));
-                int lastIndex = this.commits.size() - 1;
                 ArrayList<Commit> updatedCommits = new ArrayList<Commit>();
-                this.commits = new ArrayList<Commit>(this.commits.subList(commitIndex, lastIndex));
+                for (int i = 0; i <= commitIndex; i++) {
+                    updatedCommits.add(this.commits.get(i));
+                }
+                this.commits = updatedCommits;
+////              int lastIndex = this.commits.size() - 1;
+//                ArrayList<Commit> updatedCommits = new ArrayList<Commit>();
+//                this.commits = new ArrayList<Commit>(this.commits.subList(0, commitIndex));
             }
         }
     }
