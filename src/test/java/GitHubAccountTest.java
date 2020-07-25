@@ -1,4 +1,7 @@
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class GitHubAccountTest {
 
@@ -16,7 +19,18 @@ public class GitHubAccountTest {
         repo.addCommitToRepo(finalCommit);
 
         gitAccount = new GitHubAccount("ahmedmchamed", "ahmedhamed");
+        gitAccount.uploadRepoToAccount(repo.getRepoName());
+    }
 
+    @Test
+    public void canGetMemberNameAndUsername() {
+        assertEquals("ahmedmchamed", gitAccount.getUsername());
+        assertEquals("ahmedhamed", gitAccount.getMemberName());
+    }
+
+    @Test
+    public void canGetDefaultAccountType() {
+        assertEquals(GitHubAccountType.FREE, gitAccount.getAccountType());
     }
 
 }

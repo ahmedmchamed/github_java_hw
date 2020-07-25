@@ -19,6 +19,11 @@ public class RepositoryTest {
     }
 
     @Test
+    public void canGetRepoName() {
+       assertEquals("GitHub repo", repo.getRepoName());
+    }
+
+    @Test
     public void canGetCommitById() {
         Commit result = repo.getCommitById(finalCommit.returnUniqueId());
         assertEquals("Final commit", result.returnDescription());

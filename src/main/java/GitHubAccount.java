@@ -32,6 +32,11 @@ public class GitHubAccount {
         return this.accountType;
     }
 
+    public void uploadRepoToAccount(String repoName) {
+        Repository repo = this.getRepoByName(repoName);
+        this.repositories.put(repoName, repo);
+    }
+
     public void setAccountType() {
         System.out.println("What type of account would you like? (Free/Pro)");
         String querySelector = "";
