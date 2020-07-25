@@ -1,3 +1,4 @@
+import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -32,14 +33,13 @@ public class GitHubAccount {
         return this.accountType;
     }
 
-    public void uploadRepoToAccount(String repoName) {
-        Repository repo = this.getRepoByName(repoName);
-        this.repositories.put(repoName, repo);
+    public void uploadRepoToAccount(Repository repo) {
+        this.repositories.put(repo.getRepoName(), repo);
     }
 
     public void setAccountType() {
         System.out.println("What type of account would you like? (Free/Pro)");
-        String querySelector = "";
+        String querySelector = "PRO";
         Scanner readInput = new Scanner(System.in);
 
         querySelector = readInput.nextLine().toLowerCase();
@@ -50,8 +50,8 @@ public class GitHubAccount {
             this.accountType = GitHubAccountType.FREE;
         }
         else if (querySelector.toLowerCase().equals("pro")) {
-            System.out.println("Aw yeah, nice. That'll be 5 percent" +
-                    "of your life expectancy please. Too late now, nerd.");
+            System.out.println("Aw yeah, nice. That'll be 5 percent " +
+                    "off of your life expectancy please. Too late now, nerd.");
             this.accountType = GitHubAccountType.PRO;
         }
         else {
