@@ -14,6 +14,10 @@ public class Repository {
         this.commits = new ArrayList<Commit>();
     }
 
+    public RepositoryType getRepoType() {
+        return this.repoType;
+    }
+
     public void addCommitToRepo(Commit commit) {
         this.commits.add(commit);
     }
