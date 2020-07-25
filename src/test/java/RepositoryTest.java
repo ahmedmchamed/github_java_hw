@@ -52,7 +52,7 @@ public class RepositoryTest {
 
     @Test
     public void canGetRepoName() {
-       assertEquals("GitHub repo", repo1.getRepoName());
+       assertEquals("Jack's repo", repo1.getRepoName());
     }
 
     @Test
@@ -67,8 +67,8 @@ public class RepositoryTest {
 
     @Test
     public void canGetCommitById() {
-        Commit result = repo1.getCommitById(finalCommit.returnUniqueId());
-        assertEquals("Final commit", result.returnDescription());
+        Commit result = repo1.getCommitById(developCommit.returnUniqueId());
+        assertEquals("Develop commit", result.returnDescription());
     }
 
     @Test
@@ -84,9 +84,9 @@ public class RepositoryTest {
 
     @Test
     public void canSortReposAccordingToCommits() {
-        assertEquals("Someone's repo", this.repoList.get(3).getRepoName());
+        assertEquals("Fred's repo", this.repoList.get(3).getRepoName());
         Collections.sort(this.repoList, Repository.NUMBER_OF_COMMITS);
-        assertEquals("Freaking repo", this.repoList.get(3).getRepoName());
+        assertEquals("Karl's repo", this.repoList.get(3).getRepoName());
     }
 
 }
