@@ -17,4 +17,9 @@ public class CommitTest {
         assertEquals("Initial commit", commitTest.returnDescription());
     }
 
+    @Test
+    public void hasCommitId() {
+        System.out.println(commitTest.returnUniqueId());
+    }
+
 }
