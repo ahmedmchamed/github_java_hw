@@ -1,16 +1,17 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class GitHubAccount {
 
     private String username;
     private String memberName;
-    private ArrayList<Repository> repositories;
+    private HashMap<String, Repository> repositories;
     private GitHubAccountType accountType;
 
     public GitHubAccount(String username, String memberName, GitHubAccountType accountType) {
         this.username = username;
         this.memberName = memberName;
-        this.repositories = new ArrayList<Repository>();
+        this.repositories = new HashMap<String, Repository>();
         this.accountType = accountType;
     }
 
