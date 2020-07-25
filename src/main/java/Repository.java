@@ -1,7 +1,9 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
-public class Repository {
+public class Repository implements Comparable<Repository> {
 
     private String repoName;
     private String repoDescription;
@@ -14,6 +16,24 @@ public class Repository {
         this.repoType = repoType;
         this.commits = new ArrayList<Commit>();
     }
+
+    public int compareTo(Repository repo) {
+        if (this.commits.size() > repo.getCommitsSize()) {
+            return 1;
+        }
+        else if (this.commits.size() < repo.getCommitsSize()) {
+            return -1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+//    static final Comparator<Repository> NUMBEROFCOMMITS = new Comparator<Repository>() {
+//        public int compare(Repository repo1, Repository repo2) {
+//            int commitsCompare = repo1.getCommitsSize().compareTo;
+//        }
+//    };
 
     public String getRepoName() {
         return this.repoName;
@@ -54,9 +74,6 @@ public class Repository {
                     updatedCommits.add(this.commits.get(i));
                 }
                 this.commits = updatedCommits;
-////              int lastIndex = this.commits.size() - 1;
-//                ArrayList<Commit> updatedCommits = new ArrayList<Commit>();
-//                this.commits = new ArrayList<Commit>(this.commits.subList(0, commitIndex));
             }
         }
     }
