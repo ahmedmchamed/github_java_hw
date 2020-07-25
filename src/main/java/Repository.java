@@ -22,6 +22,10 @@ public class Repository {
         return this.repoType;
     }
 
+    public int getCommitsSize() {
+        return this.commits.size();
+    }
+
     public void addCommitToRepo(Commit commit) {
         this.commits.add(commit);
     }
