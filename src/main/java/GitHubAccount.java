@@ -23,6 +23,10 @@ public class GitHubAccount {
         return this.memberName;
     }
 
+    public Repository getRepoByName(String repoName) {
+        return this.repositories.get(repoName);
+    }
+
     public GitHubAccountType getAccountType() {
         return this.accountType;
     }
