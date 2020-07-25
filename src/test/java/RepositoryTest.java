@@ -11,24 +11,33 @@ public class RepositoryTest {
 
     private Commit initialCommit;
     private Commit developCommit;
+    private Commit ongoingCommit;
     private Commit finalCommit;
     private Repository repo1;
     private Repository repo2;
     private Repository repo3;
+    private Repository repo4;
     private ArrayList<Repository> repoList = new ArrayList<Repository>();
 
     @Before
     public void before() {
         initialCommit = new Commit("Initial commit", CommitUniqueId.UNIQUEID.createUniqueId());
         developCommit = new Commit("Develop commit", CommitUniqueId.UNIQUEID.createUniqueId());
+        ongoingCommit = new Commit("Ongoing commit", CommitUniqueId.UNIQUEID.createUniqueId());
         finalCommit = new Commit("Final commit", CommitUniqueId.UNIQUEID.createUniqueId());
-        repo1 = new Repository("GitHub repo", "CodeClan version of GitHub", RepositoryType.PUBLIC);
-        repo2 = new Repository("Someone's repo", "What's happening", RepositoryType.PRIVATE);
-        repo3 = new Repository("Other repo", "Let's all commit together", RepositoryType.PUBLIC);
+        repo1 = new Repository("Jack's repo", "new features", RepositoryType.PUBLIC);
+        repo2 = new Repository("Fred's repo", "bug fixes", RepositoryType.PRIVATE);
+        repo3 = new Repository("Mickey's repo", "typos", RepositoryType.PUBLIC);
+        repo4 = new Repository("Karl's repo", "feature branch", RepositoryType.PRIVATE);
+
+        repo4.addCommitToRepo(initialCommit);
+        repo4.addCommitToRepo(developCommit);
+        repo4.addCommitToRepo(ongoingCommit);
+        repo4.addCommitToRepo(finalCommit);
 
         repo1.addCommitToRepo(initialCommit);
         repo1.addCommitToRepo(developCommit);
-        repo1.addCommitToRepo(finalCommit);
+        repo1.addCommitToRepo(ongoingCommit);
 
         repo2.addCommitToRepo(initialCommit);
         repo2.addCommitToRepo(developCommit);
@@ -36,6 +45,7 @@ public class RepositoryTest {
         repo3.addCommitToRepo(initialCommit);
 
         repoList.add(repo3);
+        repoList.add(repo4);
         repoList.add(repo1);
         repoList.add(repo2);
     }
@@ -73,11 +83,10 @@ public class RepositoryTest {
     }
 
     @Test
-    public void canGetRepoWithMostCommits() {
-//        System.out.println(this.repoList.get(2).getRepoName());
-//        Collections.sort(this.repoList, Repository.NUMBER_OF_COMMITS);
-//        System.out.println(this.repoList);
-//        assertEquals("Something", this.repoList.get(2).getRepoName());
+    public void canSortReposAccordingToCommits() {
+        assertEquals("Someone's repo", this.repoList.get(3).getRepoName());
+        Collections.sort(this.repoList, Repository.NUMBER_OF_COMMITS);
+        assertEquals("Freaking repo", this.repoList.get(3).getRepoName());
     }
 
 }
