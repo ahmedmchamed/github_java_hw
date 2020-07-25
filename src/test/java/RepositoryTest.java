@@ -24,6 +24,11 @@ public class RepositoryTest {
     }
 
     @Test
+    public void canGetRepoType() {
+        assertEquals(RepositoryType.PUBLIC, repo.getRepoType());
+    }
+
+    @Test
     public void canGetCommitById() {
         Commit result = repo.getCommitById(finalCommit.returnUniqueId());
         assertEquals("Final commit", result.returnDescription());
