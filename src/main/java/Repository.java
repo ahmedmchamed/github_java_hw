@@ -23,12 +23,12 @@ public class Repository {
     }
 
     public Commit getCommitById(String id) {
-           for (Commit commit : this.commits) {
-               if (id.equals(commit.returnUniqueId())) {
-                   return commit;
-               }
-           }
-           return null;
+        for (Commit commit : this.commits) {
+            if (id.equals(commit.returnUniqueId())) {
+                return commit;
+            }
+        }
+        return null;
     }
 
 }

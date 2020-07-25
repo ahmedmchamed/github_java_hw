@@ -31,4 +31,18 @@ public class GitHubAccount {
         return this.accountType;
     }
 
+    public void setAccountType(String querySelector) {
+        System.out.println("What type of account would you like?");
+        if (querySelector.toLowerCase().equals("free")) {
+            System.out.println("Freaking cheapo. Fine, take your free " +
+                    "account and get outta here.");
+            this.accountType = GitHubAccountType.FREE;
+        }
+        else if (querySelector.toLowerCase().equals("pro")) {
+            System.out.println("Aw yeah, nice. That'll be 5 percent" +
+                    "of your life expectancy please. Too late now, nerd.");
+            this.accountType = GitHubAccountType.PRO;
+        }
+    }
+
 }
