@@ -15,4 +15,16 @@ public class GitHubAccount {
         this.accountType = accountType;
     }
 
+    public String getUsername() {
+        return this.username;
+    }
+
+    public String getMemberName() {
+        return this.memberName;
+    }
+
+    public GitHubAccountType getAccountType() {
+        return this.accountType;
+    }
+
 }
