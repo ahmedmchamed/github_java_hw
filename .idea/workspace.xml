@@ -4,7 +4,7 @@
     <list default="true" id="f5c9572f-bcb4-468c-87ed-a3980167b9ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GitHubAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GitHubAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GitHubAccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GitHubAccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,5 +151,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.1.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595667754233" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1595680895376">
+      <screen x="60" y="0" width="1380" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/1440.23.1920.1057/60.0.1380.900@60.0.1380.900" timestamp="1595680895376" />
   </component>
 </project>

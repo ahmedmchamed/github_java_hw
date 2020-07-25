@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GitHubAccount {
 
@@ -8,11 +9,11 @@ public class GitHubAccount {
     private HashMap<String, Repository> repositories;
     private GitHubAccountType accountType;
 
-    public GitHubAccount(String username, String memberName, GitHubAccountType accountType) {
+    public GitHubAccount(String username, String memberName) {
         this.username = username;
         this.memberName = memberName;
         this.repositories = new HashMap<String, Repository>();
-        this.accountType = accountType;
+        this.accountType = GitHubAccountType.FREE;
     }
 
     public String getUsername() {
@@ -31,8 +32,13 @@ public class GitHubAccount {
         return this.accountType;
     }
 
-    public void setAccountType(String querySelector) {
-        System.out.println("What type of account would you like?");
+    public void setAccountType() {
+        System.out.println("What type of account would you like? (Free/Pro)");
+        String querySelector = "";
+        Scanner readInput = new Scanner(System.in);
+
+        querySelector = readInput.nextLine().toLowerCase();
+
         if (querySelector.toLowerCase().equals("free")) {
             System.out.println("Freaking cheapo. Fine, take your free " +
                     "account and get outta here.");
@@ -42,6 +48,18 @@ public class GitHubAccount {
             System.out.println("Aw yeah, nice. That'll be 5 percent" +
                     "of your life expectancy please. Too late now, nerd.");
             this.accountType = GitHubAccountType.PRO;
+        }
+        else {
+            System.out.println("Invalid input. Try again? (y/n)");
+            char confirmTryAgain = ' ';
+            Scanner readConfirmation = new Scanner(System.in);
+            confirmTryAgain = readConfirmation.next().charAt(0);
+
+            switch (confirmTryAgain) {
+                case 'y': this.setAccountType();
+                case 'n': return;
+                default: break;
+            }
         }
     }
 
