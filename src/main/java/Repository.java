@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Repository {
@@ -37,6 +38,18 @@ public class Repository {
             }
         }
         return null;
+    }
+
+    public void commitRevert(Commit commit) {
+        String commitId = commit.returnUniqueId();
+        for (Commit commitToFind : this.commits) {
+            if (commitToFind.returnUniqueId().equals(commitId)) {
+                int commitIndex = this.commits.indexOf((commitToFind));
+                int lastIndex = this.commits.size() - 1;
+                ArrayList<Commit> updatedCommits = new ArrayList<Commit>();
+                this.commits = new ArrayList<Commit>(this.commits.subList(commitIndex, lastIndex));
+            }
+        }
     }
 
 }
