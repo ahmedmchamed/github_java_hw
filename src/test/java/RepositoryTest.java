@@ -1,6 +1,10 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 import static org.junit.Assert.assertEquals;
 
 public class RepositoryTest {
@@ -11,6 +15,7 @@ public class RepositoryTest {
     private Repository repo1;
     private Repository repo2;
     private Repository repo3;
+    private ArrayList<Repository> repoList = new ArrayList<Repository>();
 
     @Before
     public void before() {
@@ -29,6 +34,10 @@ public class RepositoryTest {
         repo2.addCommitToRepo(developCommit);
 
         repo3.addCommitToRepo(initialCommit);
+
+        repoList.add(repo3);
+        repoList.add(repo1);
+        repoList.add(repo2);
     }
 
     @Test
@@ -61,6 +70,14 @@ public class RepositoryTest {
         repo1.commitRevert(initialCommit);
         assertEquals(1, repo1.getCommitsSize());
         assertEquals("Initial commit", repo1.getAllCommits().get(0).returnDescription());
+    }
+
+    @Test
+    public void canGetRepoWithMostCommits() {
+//        System.out.println(this.repoList.get(2).getRepoName());
+//        Collections.sort(this.repoList, Repository.NUMBER_OF_COMMITS);
+//        System.out.println(this.repoList);
+//        assertEquals("Something", this.repoList.get(2).getRepoName());
     }
 
 }

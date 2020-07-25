@@ -29,11 +29,13 @@ public class Repository implements Comparable<Repository> {
         }
     }
 
-//    static final Comparator<Repository> NUMBEROFCOMMITS = new Comparator<Repository>() {
-//        public int compare(Repository repo1, Repository repo2) {
-//            int commitsCompare = repo1.getCommitsSize().compareTo;
-//        }
-//    };
+    public static Comparator<Repository> NUMBER_OF_COMMITS = new Comparator<Repository>() {
+        public int compare(Repository repo1, Repository repo2) {
+            Integer repo1size = repo1.getCommitsSize();
+            Integer repo2size = repo2.getCommitsSize();
+            return repo1size.compareTo(repo2size);
+        }
+    };
 
     public String getRepoName() {
         return this.repoName;
