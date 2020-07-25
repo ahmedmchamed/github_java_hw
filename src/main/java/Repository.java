@@ -14,4 +14,8 @@ public class Repository {
         this.commits = new ArrayList<Commit>();
     }
 
+    public void addCommitToRepo(Commit commit) {
+        this.commits.add(commit);
+    }
+
 }
