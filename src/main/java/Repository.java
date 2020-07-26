@@ -2,6 +2,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class Repository implements Comparable<Repository> {
 
@@ -64,6 +65,27 @@ public class Repository implements Comparable<Repository> {
             }
         }
         return null;
+    }
+
+    public void setRepoAccess() {
+        System.out.println("Your repo is set to public visibility by default. " +
+                "Do you want to set to private instead? (y/n)");
+        char readConfirmation;
+        Scanner readInput = new Scanner(System.in);
+        readConfirmation = readInput.next().charAt(0);
+
+        switch (readConfirmation) {
+            case 'y':
+                System.out.println("Private access confirmed.\n");
+                this.repoType = RepositoryType.PRIVATE;
+                break;
+            case 'n':
+                System.out.println("Default public access confirmed.\n");
+                break;
+            default:
+                System.out.println("Invalid input.");
+                this.setRepoAccess();
+        }
     }
 
     public void commitRevert(Commit commit) {
