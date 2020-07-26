@@ -26,9 +26,12 @@ public class Runner {
                     Scanner readRepoDescription = new Scanner(System.in);
                     String repoDescription = readRepoDescription.nextLine();
                     Repository newRepo = new Repository(repoName, repoDescription, RepositoryType.PUBLIC);
-                    newRepo.
-                    System.out.println(repoName);
-                    System.out.println(repoDescription);
+                    System.out.println(newRepo.getRepoType());
+                    newRepo.setRepoAccess();
+                    System.out.println(newRepo.getRepoType());
+//                    System.out.println(repoName);
+//                    System.out.println(repoDescription);
+
                 }
 
                 if (option.equals(("-commit"))) {
