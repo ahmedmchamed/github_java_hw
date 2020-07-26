@@ -1,3 +1,3 @@
-//public class GitHub implements Comparable<Repository> {
+//public class GitHub {
 //
 //}

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class GitHubAccount {
+public class GitHubAccount implements Comparable<GitHubAccount> {
 
     private String username;
     private String memberName;
@@ -15,6 +15,11 @@ public class GitHubAccount {
         this.memberName = memberName;
         this.repositories = new HashMap<String, Repository>();
         this.accountType = GitHubAccountType.FREE;
+    }
+
+    public int compareTo(GitHubAccount account) {
+        int compareResult = this.getMemberName().compareTo(account.getMemberName());
+        return (compareResult != 0 ? compareResult : this.getUsername().compareTo(account.getUsername()));
     }
 
     public String getUsername() {

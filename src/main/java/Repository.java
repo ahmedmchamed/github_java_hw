@@ -83,7 +83,7 @@ public class Repository implements Comparable<Repository> {
                 System.out.println("Default public access confirmed.\n");
                 break;
             default:
-                System.out.println("Invalid input.");
+                System.out.println("Invalid input. Please try again. (y/n)");
                 this.setRepoAccess();
         }
     }
