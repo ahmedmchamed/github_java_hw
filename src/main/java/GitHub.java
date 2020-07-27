@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GitHub {
 
@@ -6,6 +7,10 @@ public class GitHub {
 
     public GitHub () {
         this.gitAccountsList = new ArrayList<GitHubAccount>();
+    }
+
+    public int getGitAccountsSize() {
+        return this.gitAccountsList.size();
     }
 
     public void addGitAccountToList(GitHubAccount gitAccount) {
@@ -24,5 +29,10 @@ public class GitHub {
         }
         return null;
     }
+
+    public void sortAccountsList() {
+        Collections.sort(this.gitAccountsList);
+    }
+
 
 }

@@ -4,6 +4,16 @@
     <list default="true" id="f5c9572f-bcb4-468c-87ed-a3980167b9ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GitHub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GitHub.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GitHubAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GitHubAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Runner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GitHubTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GitHubTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GitHubAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GitHubAccount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repository$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Repository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Repository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Runner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Runner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/GitHubTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/GitHubTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
-  <component name="RunManager" selected="Application.Runner">
+  <component name="RunManager" selected="JUnit.GitHubTest.githubCanSortAccountsList">
     <configuration name="Runner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Runner" />
       <module name="github_java_hw" />
@@ -59,6 +69,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GitHubTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="github_java_hw" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GitHubTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GitHubTest.githubCanSortAccountsList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="github_java_hw" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GitHubTest" />
+      <option name="METHOD_NAME" value="githubCanSortAccountsList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RepositoryTest.canGetCommitById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="github_java_hw" />
       <option name="PACKAGE_NAME" value="" />
@@ -69,33 +98,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest.canGetRepoWithMostCommits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="github_java_hw" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RepositoryTest" />
-      <option name="METHOD_NAME" value="canGetRepoWithMostCommits" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RepositoryTest.canRevertToCommit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="github_java_hw" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RepositoryTest" />
-      <option name="METHOD_NAME" value="canRevertToCommit" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GitHubTest.githubCanSortAccountsList" />
+        <item itemvalue="JUnit.GitHubTest" />
         <item itemvalue="Application.Runner" />
         <item itemvalue="JUnit.All in github_java_hw" />
         <item itemvalue="JUnit.RepositoryTest.canGetCommitById" />
-        <item itemvalue="JUnit.RepositoryTest.canGetRepoWithMostCommits" />
-        <item itemvalue="JUnit.RepositoryTest.canRevertToCommit" />
       </list>
     </recent_temporary>
   </component>
@@ -133,25 +142,25 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="533" y="166" key="#com.intellij.ide.util.MemberChooser/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595703926093" />
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1595790625938">
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom" timestamp="1595808336820">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595790625938" />
+    <state width="1398" height="245" key="GridCell.Tab.0.bottom/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595808336820" />
     <state width="1398" height="245" key="GridCell.Tab.0.bottom/1440.23.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1595709678094" />
-    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1595790625936">
+    <state width="1398" height="245" key="GridCell.Tab.0.center" timestamp="1595808336818">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595790625936" />
+    <state width="1398" height="245" key="GridCell.Tab.0.center/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595808336818" />
     <state width="1398" height="245" key="GridCell.Tab.0.center/1440.23.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1595709678091" />
-    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1595790625935">
+    <state width="1398" height="245" key="GridCell.Tab.0.left" timestamp="1595808336816">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595790625935" />
+    <state width="1398" height="245" key="GridCell.Tab.0.left/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595808336816" />
     <state width="1398" height="245" key="GridCell.Tab.0.left/1440.23.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1595709678090" />
-    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1595790625937">
+    <state width="1398" height="245" key="GridCell.Tab.0.right" timestamp="1595808336819">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="245" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595790625937" />
+    <state width="1398" height="245" key="GridCell.Tab.0.right/1440.0.1920.1080/0.0.1440.900@0.0.1440.900" timestamp="1595808336819" />
     <state width="1398" height="245" key="GridCell.Tab.0.right/1440.23.1920.1057/0.0.1440.900@0.0.1440.900" timestamp="1595709678093" />
     <state width="1398" height="303" key="GridCell.Tab.1.bottom" timestamp="1595683504773">
       <screen x="0" y="0" width="1440" height="900" />

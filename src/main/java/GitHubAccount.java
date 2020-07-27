@@ -44,7 +44,7 @@ public class GitHubAccount implements Comparable<GitHubAccount> {
 
     public void setAccountType() {
         System.out.println("What type of account would you like? (Free/Pro)");
-        String querySelector = "PRO";
+        String querySelector;
         Scanner readInput = new Scanner(System.in);
 
         querySelector = readInput.nextLine().toLowerCase();
