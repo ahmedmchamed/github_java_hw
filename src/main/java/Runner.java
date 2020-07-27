@@ -23,11 +23,21 @@ public class Runner {
                     Scanner readFullName = new Scanner(System.in);
                     String fullName = readFullName.nextLine();
 
+                    System.out.println("Please enter a preferred username:");
                     Scanner readUserName = new Scanner(System.in);
                     String userName = readUserName.nextLine();
 
                     GitHubAccount newAccount = new GitHubAccount(userName, fullName);
-                    
+                    newAccount.setAccountType();
+                    System.out.println("Thanks for creating an account.\n");
+                    String welcome = String.format("Your details are:\n" +
+                            "Name: %s\n" +
+                            "Username: %s\n" +
+                            "Account type: %s\n",
+                            newAccount.getMemberName(),
+                            newAccount.getUsername(),
+                            newAccount.getAccountType().toString());
+                    System.out.println(welcome);
                 }
 
                 if (option.equals("-createrepo")) {

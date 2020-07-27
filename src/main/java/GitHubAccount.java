@@ -43,7 +43,7 @@ public class GitHubAccount implements Comparable<GitHubAccount> {
     }
 
     public void setAccountType() {
-        System.out.println("What type of account would you like? (Free/Pro)");
+        System.out.println("What type of account would you like? (Free/Pro)\n");
         String querySelector;
         Scanner readInput = new Scanner(System.in);
 
@@ -51,12 +51,12 @@ public class GitHubAccount implements Comparable<GitHubAccount> {
 
         if (querySelector.toLowerCase().equals("free")) {
             System.out.println("Freaking cheapo. Fine, take your free " +
-                    "account and get outta here.");
+                    "account and get outta here.\n");
             this.accountType = GitHubAccountType.FREE;
         }
         else if (querySelector.toLowerCase().equals("pro")) {
             System.out.println("Aw yeah, nice. That'll be 5 percent " +
-                    "off of your life expectancy please. Too late now, nerd.");
+                    "off of your life expectancy please. Too late now, nerd.\n");
             this.accountType = GitHubAccountType.PRO;
         }
         else {
