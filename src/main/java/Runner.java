@@ -12,8 +12,8 @@ public class Runner {
                 String option = args[i].toLowerCase().toString();
                 if (option.equals("-h")) {
                     System.out.println("Here are some options that you can use.\n");
-                    System.out.println("\t-createaccount [NAME] [\"DESCRIPTION\"] to create an account on GitHubClan");
-                    System.out.println("\t-createrepo [NAME] [\"DESCRIPTION\"] to create a new repository");
+                    System.out.println("\t-createaccount to create an account on GitHubClan");
+                    System.out.println("\t-createrepo to create a new repository");
                     System.out.println("\t-commit to detail an new commit");
                     System.out.println("\t-revert [COMMIT] to revert to a previous commit\n");
                 }

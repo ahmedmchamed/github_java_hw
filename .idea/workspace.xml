@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f5c9572f-bcb4-468c-87ed-a3980167b9ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Commit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CommitUniqueId.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GitHubAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GitHubAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RepositoryType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Runner.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Runner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Runner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
